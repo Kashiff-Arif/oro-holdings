@@ -1,0 +1,156 @@
+
+
+.who-we-are{
+    background: linear-gradient(108.74deg, rgba(255, 255, 255, 0) -0.27%, rgba(182, 153, 101, 0.25) 192.32%);
+    &__wrapper{
+        display:flex;
+        gap:rem(70px);
+        >div{
+           &:first-child{
+            width:52%;
+           }
+           &:last-child{
+            width:48%;
+           }
+        }
+    }
+    h3{
+        font-size:rem(34px);
+        line-height: 47px;
+        margin:0;
+        font-weight: 400;
+        span{
+            color:var(--primary);
+            font-style: italic;
+        }
+    }
+}
+.we-work{
+    background-color: #52545A;
+    .sectionHead{
+        &__title{
+            color:var(--white);
+            max-width:700px;
+        }
+    }
+   
+}
+.we-serve{
+    background: linear-gradient(108.74deg, rgba(255, 255, 255, 0) -0.27%, rgba(182, 153, 101, 0.25) 192.32%);
+    .sectionHead{
+        p{
+            color:#5E5952;
+            margin-bottom:0;
+            max-width:700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+.quote{
+    background-color: #36383d;
+    .sectionHead{
+        text-align: center;
+        .qmark{
+            font-size: 110px;
+            color: var(--primary);
+            line-height: 0;
+            display: block;
+            margin-bottom: 24px;
+            margin-top:44px;
+            font-family: $secondary-font;
+        }
+        &__title{
+            color:var(--white);
+        }
+        h3{
+            font-size: 12px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color:var(--primary);
+            text-align: center;
+            font-family: $primary-font;
+            margin:0;
+        }
+    }
+}
+.beliefs{
+    .sectionHead{
+            max-width: 760px;
+    }
+    &__list{
+        border-top: 1px solid rgba(182, 153, 101, .4);
+        margin-top: 40px;
+    }
+    .belief{
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        gap: 34px;
+        padding: 32px 0;
+        border-bottom: 1px solid rgba(182, 153, 101, .4);
+        align-items: baseline;
+        transition: padding-left .2s;
+        .num{
+            font-size: 24px;
+            color: var(--primary);
+            font-family: $secondary-font;
+        }
+        p{
+            font-family: $secondary-font;
+            font-size: clamp(22px, 2.4vw, 28px);
+            line-height: 1.35;
+            margin:0;
+            em{
+                font-style: italic;
+                color: var(--primary);
+            }
+        }
+        &:hover{
+            padding-left: 10px;
+        }
+    }
+}
+
+@media screen and (max-width:1200px){
+    .who-we-are{
+        &__wrapper{
+            gap:rem(50px);
+        }
+    }
+}
+@media screen and (max-width:991px){
+    .who-we-are{
+        &__wrapper{
+            flex-direction: column;
+            gap:rem(30px);
+            >div{
+                width:100% !important;
+            }
+        }
+        h3{
+            font-size:rem(28px);
+            line-height: 38px;
+        }
+    }
+}
+@media screen and (max-width:767px){
+    .who-we-are{
+        h3{
+            font-size:rem(24px);
+            line-height: 28px;
+        }
+        p{
+            font-size:rem(16px);
+            line-height: 23px;
+        }
+    }
+}
+@media screen and (max-width:575px){
+    .beliefs{
+        .belief {
+            grid-template-columns: 56px 1fr;
+            gap: 18px;
+            padding:20px 0;
+        }
+    }
+}

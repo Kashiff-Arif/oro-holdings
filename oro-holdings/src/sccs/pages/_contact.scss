@@ -1,0 +1,183 @@
+.contact{
+    &__detail{
+        background: linear-gradient(108.74deg, rgba(255, 255, 255, 0) -0.27%, rgba(182, 153, 101, 0.20) 192.32%);
+        background-color: #fff;
+        .sectionHead{
+            p{
+                max-width:380px;
+                font-size:rem(16px);
+                color:#5C5650;
+            }
+        }
+        &--wrapper{
+            display:flex;
+            gap:rem(120px);
+        }
+        &--left{
+            width:48%;
+        }
+        &--right{
+            width:52%;
+        }
+        &--adress{
+            margin-top: rem(50px);
+            border-top:1px solid #E6E1DA;
+            border-bottom: 1px solid #E6E1DA;;
+            ul{
+                list-style: none;
+                display:flex;
+                align-items: start;
+                gap:23px;
+                padding:rem(25px) 0;
+                border-top:1px solid #E6E1DA;
+                li{
+                    .icon{
+                        width:52px;
+                        height:52px;
+                        border-radius: 100%;
+                        border:1px solid var(--primary);
+                        color:var(--primary);
+                        display:flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding:5px;
+                    }
+                    span{
+                        font-size:11px;
+                        font-weight:700;
+                        color:var(--primary);
+                        text-transform: uppercase;
+                    }
+                    p{
+                        font-size:15px;
+                        color:#1C1917;
+                        margin:11px 0 0;
+                        max-width:310px;
+                        line-height: 23px;
+                        a{
+                            text-decoration: underline;
+                            &:hover{
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__form{
+        background-color: var(--white);
+        border:1px solid #D9D8D2;
+       border-top:3px solid #B69965;
+       padding:rem(60px);
+       padding-bottom: rem(32px);
+       position: relative;
+         .logo-bg{
+            position: absolute;
+           left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            svg{
+                max-width: 300px;
+                height: auto;
+                opacity: .04;
+                @media screen and (max-width:767px){
+                    max-width:220px;
+                }
+            }
+         }
+       &--text{
+        font-size:12px;
+        margin-top:rem(12px);
+        line-height: 17px;
+        color:#78716C;
+        a{
+            text-decoration: underline;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+       }
+       .form-group{
+            margin-bottom:rem(20px);
+       }
+       .d-flex{
+        flex-direction: column;
+       }
+       .btn{
+            cursor: pointer;    
+        }
+        .nice-select , input{
+            background-color: transparent;
+        }
+       @media screen and (min-width:768px){
+        .d-flex{
+            flex-wrap: wrap;
+            margin:0 -20px;
+            flex-direction: row;
+            >div{
+                width:50%;
+                padding:0 20px;
+            }
+        }
+       }
+       h3{
+            font-size:rem(28px);
+            font-weight:400;
+            margin-bottom:18px;
+       }
+       p{
+            font-size:13px;
+            color:#78716C;
+            margin-bottom: rem(35px);
+       }
+    }
+    @media screen and (max-width:1200px){
+        &__detail{
+            &--wrapper{
+                gap:rem(40px);
+            }
+        }
+        &__form{
+            padding:rem(40px);
+            padding-bottom: rem(25px);
+        }
+    }
+    @media screen and (max-width:991px){
+        &__detail{
+            &--wrapper{
+                flex-direction: column;
+                >div{
+                    width:100% !important;
+                }
+            }
+            &--adress{
+                margin-top: rem(30px);
+            }
+        }
+        &__form{
+            padding:rem(25px);
+        }
+    }
+    @media  screen and (max-width:767px){
+        &__detail{
+            &--adress{
+                ul {
+                    gap:15px;
+                    li{
+                        .icon{
+                            width:45px;
+                            height:45px;
+                            img ,svg{
+                                max-width: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

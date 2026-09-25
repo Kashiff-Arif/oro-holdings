@@ -1,0 +1,398 @@
+
+.ourPillers{
+
+    position: relative;
+    padding-left: calc((100vw - 1400px) / 2);
+    @media screen and (max-width:1400px){
+        padding-left:30px;
+    }
+    @media screen and (max-width:1200px){
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .swiper{
+        padding-top:rem(53px);
+         .swiper-slide{
+            height:auto !important;
+         }
+         .swiper-controls{
+
+            padding-top:rem(32px);
+            padding-right: calc((100vw - 1400px) / 2);
+            @media screen and (max-width:1400px){
+                padding-right:30px;
+            }
+            @media screen and (max-width:1200px){
+                padding-right:15px;
+            }
+         }
+    }
+    .card{
+        background-color: #fff;
+        height: 100%;
+        cursor: pointer;
+        overflow: hidden;
+        transition: transform .45s, box-shadow .45s, border-color .45s;
+        padding:0;
+        border:0;
+        &__image{
+            width:100%;
+            --bg:#000;
+            --logocolor:#fff;
+            height:170px;
+            display:flex;
+            align-items: center;
+            justify-self: center;
+            background-color: var(--bg);
+            color:var(--logocolor);
+            position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(circle at 50% 38%, rgba(255, 255, 255, .16), transparent 60%);
+                opacity:0;
+            }
+            svg{
+                max-width:87px;
+                height:auto;
+                margin:auto;
+                display:block;
+            }
+        }
+        &__content{
+            --textcolor:#000;
+            --mailcolor:#000;
+            padding:rem(35px) rem(28px);
+            height: calc(100% - 170px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h4{
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 12px;
+                color: var(--textcolor);
+                margin:0;
+                text-transform: uppercase;
+                font-family: $primary-font;
+            }
+            h3{
+                font-size:rem(24px);
+                color:#14120F;
+                font-family: $secondary-font;
+                margin:17px 0 20px;
+                font-weight: 400;
+             }
+             p{
+                line-height: 13px;
+                margin:0;
+                font-size:13px;
+                color:var(--mailcolor);
+
+             }
+        }
+        &:hover{
+            transform: translateY(-8px);
+            box-shadow: 0 26px 56px -30px rgba(58, 47, 28, .55);
+            .card{
+                &__image{
+                    &:after{
+                        opacity:1;
+                    }
+                }
+            }
+        }
+    }
+    .fundManagment{
+       .card{
+            &__image{
+                --bg: #831308;
+            }
+            &__content{
+                --textcolor: #947341;
+                --mailcolor: #831308;
+            }
+       }
+    }
+    .investmentManagement{
+        .card{
+            &__image{
+               --bg:#101B30 ; 
+            //    --logocolor:#B69965;
+            }
+            &__content{
+                --textcolor:#101B30;
+            }
+       }
+    }
+    .oroCapital{
+        .card{
+            &__image{
+               --bg:#52545A;
+            }
+            &__content{
+                --textcolor:#52545A; 
+                --mailcolor:#831308;
+            }
+       }
+    }
+    .oroStructuring{
+        .card{
+            &__image{
+               --bg:#D96C1A;
+            }
+            &__content{
+                --textcolor:#D96C1A; 
+                --mailcolor:#D96C1A;
+            }
+       }
+    }
+    .oroFamily{
+         .card{
+            &__image{
+               --bg:#831308;
+            }
+            &__content{
+                --textcolor:#947341; 
+                --mailcolor:#947341;
+            }
+       }
+    }
+    @media screen and (max-width:991px){
+        .swiper{
+             padding-top:rem(50px);
+             .swiper-controls{
+
+                .swiper-buttons{
+
+                    .swiper-button{
+                        width:rem(40px);
+                        height:rem(40px);
+
+                    }
+                }
+            }
+        }
+        .card{
+            &__content{
+                h3{
+                    font-size:rem(21px);
+                }
+            }
+        }
+    }
+}
+.card-modal {
+    --bg:#000;
+    --textcolor:#fff;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.4);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+    opacity 0.35s ease,
+    visibility 0s linear 0.35s;
+    &__close{
+        background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.75 17.5L0 15.75L7 8.75L0 1.75L1.75 0L8.75 7L15.75 0L17.5 1.75L10.5 8.75L17.5 15.75L15.75 17.5L8.75 10.5L1.75 17.5Z' fill='white'/%3E%3C/svg%3E%0A");
+        width:18px;
+        height:18px;
+        background-color: transparent;
+        padding:0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        z-index:2;
+        top:23px;
+        right:32px;
+        border:0;
+        font-size:0;
+        cursor: pointer;
+        transition: .5s ease all;
+        &:hover{
+            transform: rotate(180deg);
+        }
+    }
+    &.fundManagment__modal{
+        --bg:#951307;
+        --textcolor:#fff;
+    }
+    &.assetManagement__modal{
+        --bg:#000;
+        --textcolor:#fff;
+    }
+    &.investmentManagement__modal{
+        --bg:#101B2F ; 
+        // --textcolor:#B69964;
+    }
+    &.oroCapital__modal{
+        --bg:#52535A;
+    }
+    &.oroStructuring__modal{
+        --bg:#D96C1A;
+    }
+    &.oroFamily__modal{
+        --bg:#951307;
+    }
+}
+
+.card-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0s linear 0s;
+}
+
+
+/* Modal box */
+.card-modal__dialog {
+    position: relative;
+
+    width: 100%;
+    max-width: 600px;
+    max-height: calc(100vh - 40px);
+
+    overflow-y: auto;
+    background: #F7F1E3;
+
+    opacity: 0;
+    transform: translate3d(0, -20px, 0) scale(0.98);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+
+    will-change: transform, opacity;
+}
+
+.card-modal.is-open .card-modal__dialog {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+}
+.modal-head{
+    
+    background-color: var(--bg);
+    padding:rem(48px) rem(40px);
+    display:flex;
+    align-items: center;
+    color:#F2EBDD;
+    gap:rem(25px);
+    svg{
+        color:var(--textcolor);
+        width:85px;
+        height:auto;
+    }
+    span{
+        display:block;
+        font-size:13px;
+        font-family: var(--secondary-font);
+    }
+    h3{
+        font-size:rem(28px);
+        font-family: $secondary-font;
+        margin:10px 0;
+        color:var(--textcolor);
+        font-weight: 400;
+    }
+    p{
+        font-size:10px;
+        font-weight:500;
+        text-transform: uppercase;
+        margin:0;
+    }
+}
+.modal-body{
+    padding:rem(40px) rem(45px);
+    p{
+        font-size:15px;
+        color:#514A43;
+        line-height: 1.7;
+    }
+    &__detail{
+         border-top: 1px solid #D7CFC0;
+        ul{
+            list-style: none;
+            display:flex;
+            align-items: center;
+            gap:10px;
+            border-bottom: 1px solid #D7CFC0;
+            padding:18px 0;
+            li{
+                font-size:15px;
+                color:#37332F;
+                a{
+                    color:#A12517;
+                    text-decoration: underline;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+                &:first-child{
+                    min-width:170px;
+                    color:#8B867E;
+                    font-size:11px;
+                    text-transform: uppercase;
+                }
+                &:last-child{
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+    .button-row{
+        margin-top:rem(40px);
+        .btn{
+            min-width:200px;
+            height:53px;
+            background-color: var(--bg);
+            color:#fff;
+            gap:20px;
+            border-color:var(--bg);
+            &:hover{
+                opacity: .7 !important;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width:767px){
+    .modal-body{
+        padding:rem(25px);
+        &__detail{
+            ul{
+                flex-direction: column;
+                align-items: start;
+                li{
+                    &:first-child{
+                        min-width: auto;
+                    }
+                }
+            }
+        }
+    }
+    .modal-head{
+        padding:rem(30px);
+        gap:1rem;
+        h3{
+            font-size:rem(23px);
+        }
+    }
+}

@@ -1,0 +1,94 @@
+
+
+// @font-face {
+//     font-family: 'Georgia';
+//     src: url('../fonts/georgia-r/Georgia.woff2') format('woff2'),
+//         url('../fonts/georgia-r/Georgia.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
+// @font-face {
+//     font-family: 'Georgia';
+//     src: url('../fonts/georgia-b/Georgia-Bold.woff2') format('woff2'),
+//         url('../fonts/georgia-b/Georgia-Bold.woff') format('woff');
+//     font-weight: 700;
+//     font-style: normal;
+//     font-display: swap;
+// }
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../fonts/HelveticaNeue/HelveticaNeue-Roman.woff2') format('woff2'),
+        url('../fonts/HelveticaNeue/HelveticaNeue-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root {
+    --primary: #b69965;
+    --gold-deep: #9c7f4e;
+    --gold-dark: #8a6f42;
+    --secondary: #B3804B;
+    --textcolor: #1C1C1C;
+    --textcolor-secondary:#1F1F1F;
+    --gray:#535459;
+    --white:#fff;
+    --cream: #F7F1E3;
+    --cream-hd: #FCF8EE;
+}
+
+@import "functions";
+// Fonts
+$secondary-font: 'Georgia';
+// $secondary-font: Georgia,'Times New Roman',serif;
+$primary-font: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+
+//** Primary Font
+// font sizes
+$h--1: (
+    base: rem(80px),
+    mobile: rem(40px),
+    tablet: rem(65px),
+    wide: rem(80px),
+);
+$h--2: (
+    base: rem(34px),
+    mobile: rem(24px),
+    tablet: rem(28px),
+    wide: rem(34px),
+);
+$h--3: (
+    base: rem(29px),
+    mobile: rem(22px),
+    tablet: rem(25px),
+    wide: rem(29px),
+);
+$h--4: (
+    base: rem(25px),
+    mobile: rem(22px),
+    tablet: rem(23px),
+    wide: rem(25px),
+);
+$h--5: (
+    base: rem(24px),
+    mobile: rem(22px),
+    tablet: rem(22px),
+    wide: rem(24px),
+);
+$h--6: (
+    base: rem(18px),
+    mobile: rem(15px),
+    tablet: rem(15px),
+    wide: rem(18px),
+);
+$p: rem(16px);
+$p--large: rem(16px);
+$p--medium: rem(16px);
+$p--small: rem(15px);
+$breakpoints: (
+    mobile: 200px,
+    tablet: 991px,
+    wide: 1300px,
+) !default;

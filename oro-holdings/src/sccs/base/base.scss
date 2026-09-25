@@ -1,0 +1,36 @@
+html {
+    font-size: 100%;
+}
+
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    font-weight: 400;
+    background-color: #f7f1e3;
+    color:var(--textcolor);
+    font-size:rem(16px);
+    font-family: $primary-font;
+    webkit-font-smoothing:antialiased;
+    
+    &.no-scroll {
+        overflow: hidden;
+        position: fixed;
+    }
+    &.modal-open{
+        overflow: hidden;
+    }
+}
+
+.container {
+    width:100%;
+    max-width: 1440px;
+    @include push--auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    @media screen and (max-width:1200px){
+        padding:0 15px;
+    }
+}
