@@ -32,7 +32,7 @@ include_once "includes/base.php";
                         ORO Holdings is a diversified global group with specialized companies delivering integrated financial solutions across the capital spectrum.
                     </p>
                 </div>
-                <div class="ourPillersWrapper">
+                <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide fundManagment">
                             <div class="card">
